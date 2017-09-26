@@ -1,0 +1,10 @@
+{
+  "name": "bowereg",
+  "description": "boweruse",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "devDependencies": {
+    "angular": "^1.5.7"
+  }
+}

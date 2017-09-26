@@ -1,0 +1,16 @@
+table{
+border-color: darkgray;
+ border-bottom-style: solid;
+    font-weight: bold;
+ cursor: pointer;   
+width: 400;
+    height: 400;
+    font-size: 100;
+}
+.red{
+    background-color: red;
+    
+}
+.green{
+    background-color: chartreuse;
+}

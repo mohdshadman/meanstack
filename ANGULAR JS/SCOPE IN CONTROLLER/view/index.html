@@ -1,0 +1,53 @@
+<html>
+<head>
+   <link rel="stylesheet" href="../custom/custom.css">
+     <script src="../libs/angular.min.js"></script>
+    <script>
+    var app=angular.module("myapp",[]);
+        app.filter("initcap",function(){  // here we are defining custom filter
+            return function(name){
+                return name.charAt(0).toUpperCase()+name.substring(1);
+            }
+        });
+        app.controller("ctrl1",function($scope){
+         $scope.data="Hello I am controller1 Data";
+            
+        });
+    app.controller("ctrl2",function($scope){
+        $scope.msg="Message with Data "+$scope.data;
+   $scope.compute=function(){
+       if($scope.salary>0){
+           $scope.hra=$scope.salary*.3;
+           $scope.da=$scope.salary*.2;
+           $scope.ta=$scope.salary*.1;
+       $scope.grossSalary=$scope.salary+$scope.hra+$scope.da+$scope.ta;
+       }
+   }
+    });
+    
+    </script>
+</head>
+<body ng-app="myapp">
+    <div ng-controller="ctrl1">
+        <input type="text" ng-model="txtName" ng-init="txtName=''" placeholder="Enter the name">
+        <input type="number" ng-model="salary" placeholder="Enter salary">
+           <div ng-controller="ctrl2">
+           <button ng-click="compute()">Compute</button>
+            <fieldset>
+              <legend>Salary Compute</legend>
+             Basic Salary is:: {{salary}}<br>
+              HRA is:: {{hra}}<br>
+              DA is :: {{da}}<br>
+              TA is :: {{ta}}<br>
+                <h1>Gross Salary is :: {{grossSalary}}</h1><br>
+                </fieldset>
+              Data is::{{data}}
+            <br>
+               <h1> Name is::{{txtName|lowercase|initcap}}</h1>
+            <br>
+            Mesage with data::{{msg}}
+            <br>
+        </div>
+    </div>
+</body>
+</html>

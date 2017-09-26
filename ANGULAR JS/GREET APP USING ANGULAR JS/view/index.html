@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script src="../angularFile/angular.min.js"></script>
+    <script src="../module/app.js"></script>
+    <script src="../models/greetfactory.js"></script>
+    <script src="../controllers/controller.js"></script>
+</head>
+<body ng-app="greetmodule">
+   <div ng-controller="greetctrl">
+    <table>
+        <tr>
+            <td>
+                <label for="">First Name</label>
+            </td>
+            <td>
+                <input ng-model="firstname" type="text" placeholder="Enter first name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="">Second Name</label>
+            </td>
+            <td>
+                <input ng-model="secondname" type="text" placeholder="Enter second name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <button ng-click="greet()">Greet</button>  
+            </td>
+            <td>
+                <button ng-click="clear()">Clear</button>
+            </td>
+        </tr>
+    </table>
+       <div>
+       <h1>
+         {{result}}
+           </h1>
+           </div>
+</div>
+</body>
+</html>

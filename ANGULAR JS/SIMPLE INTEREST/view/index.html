@@ -1,0 +1,18 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../custom/custom.css">
+    <script src="../angularFile/angular.min.js"></script>
+</head>
+<body ng-app>
+    <div>
+        <h1>Simple Interest Calculator</h1>
+    </div>
+    <input type="text" ng-model="pr" placeholder="Enter principal">
+    <input type="text" ng-model="rate" placeholder="Enter rate">
+    <input type="text" ng-model="time" placeholder="Enter time">
+    <div>
+      <h2>Simple interest is:</h2>
+      {{pr*rate*time/100}}
+    </div>
+</body>
+</html>

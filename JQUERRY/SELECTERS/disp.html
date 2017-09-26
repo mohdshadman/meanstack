@@ -1,0 +1,23 @@
+<html>
+<head>
+    <link rel="stylesheet" href="custom/custom.css">
+    <script src="libs/jquery-3.0.0.min.js"></script>
+    <script>
+   $(document).ready(function(){
+       
+   
+        $(":password").focusin(function(){
+        $(this).addClass("mystyle");
+  
+    });
+        
+    $(":password").focusout(function(){
+        $(this).removeClass("mystyle");
+    });    
+        
+   });
+    </script>
+</head>
+<body><input type="password" placeholder="Enter Password">
+</body>
+</html>

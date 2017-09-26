@@ -1,0 +1,29 @@
+<html>
+<head>
+  <script type="text/javascript" src="../libs/jquery-1.11.3.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            var object={
+                url:"../server/server.json",
+                datatype:'json'
+            }
+      var promise=$.ajax(object);
+            promise.success(function(data){
+           // console.log(promise);
+                $("div").html(JSON.stringify(data));    
+            });
+                promise.error(function(error){
+                $("div").html(error);
+                });
+            });
+        });
+    
+    
+    </script>
+</head>
+<body>
+<div></div>
+<button>DO AJAX</button>
+</body>
+</html>

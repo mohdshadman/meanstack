@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script src="libs/angular.min.js"></script>
+<script src="js/module/app.js"></script>
+    <script src="values/urlvalues.js"></script>
+<script src="js/model/factory.js"></script>
+<script src="js/controller/controller.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="friendctrl">
+    <h1>Welcome To Friends Application</h1>
+   <button ng-click="loadFriends()">Load Friends</button>
+        <ul>
+        <li ng-repeat="obj in result">
+            {{obj.name}} {{obj.phone}} {{obj.address}}
+        </li>
+    </ul>
+<h1>This Is Footer</h1>
+</body>
+</html>

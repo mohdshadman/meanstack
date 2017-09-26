@@ -1,0 +1,14 @@
+.input{
+width: 400;
+    height: 30;
+
+}
+    
+button{
+    margin: 10px;
+    margin-left: 120px;
+    padding-right: 20px;
+    font-size: 30;
+    background-color: chartreuse;
+    font-weight: bold;
+}

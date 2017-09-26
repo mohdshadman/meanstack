@@ -1,0 +1,38 @@
+<html>
+<head>
+   <link rel="stylesheet" href="../custom/custom.css">
+   <script src="../angularFile/angular.min.js"></script> 
+   <script src="../module/app.js"></script>
+   <script src="../model/friendfactory.js"></script>
+   <script src="../controller/friendcontroller.js"></script>
+</head>
+<body>
+    <div ng-app="friendapp" ng-controller="friendctrl">
+      Select Sort By:
+      <select ng-model="sortBy">
+          <option ng-selected=true>name</option>
+          <option>phone</option>
+          <option>city</option>
+      </select>  
+    <input type="checkbox" ng-model="order" ng-checked=false>Click to Reverse the order
+    <input type="text" placeholder="Search here" ng-model="searchTxt.name">
+    <ul>
+        <li ng-repeat="friend in friends|filter:searchTxt|orderBy:sortBy:order">
+            <table border="2">
+                <tr>
+                    <td><img src="{{friend.pic}}"></td>  
+                    
+                <td>{{friend.name}}</td>
+            <td>{{friend.phone}}</td> 
+                    <td>{{friend.city}}</td>    
+                </tr>
+                
+             </table>
+            
+     </li>
+        </ul>
+    
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+   <link rel="stylesheet" href="../custom/custom.css">
+     <script src="../angularFile/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="">
+        <ul ng-init="friends=['tom','mike','rim','kim']">
+            <li ng-repeat="friend in friends">
+                {{friend}}
+            </li>
+        </ul>
+    <ol ng-init="mates=friends">
+        <li ng-repeat="mate in mates">
+            {{mate}}
+        </li>
+    </ol>
+    </div>
+</body>
+</html>

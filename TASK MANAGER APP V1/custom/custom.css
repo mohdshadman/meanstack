@@ -1,0 +1,14 @@
+#bt{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+h1{
+    margin-left: 80px;
+}
+.completed{
+    color: chartreuse;
+    text-decoration: line-through;
+}
+#print{
+    cursor: pointer;
+}

@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Custom directive</title>
+    <script src="libs/angular.min.js"></script>
+    <script src="module/app.js"></script>
+    <script src="controllers/controller1.js"></script>
+  <script src="controllers/controller2.js"></script>
+    <!.. we can include the directive which we want to execute here ..>
+  <script src="directives/classLevel.js"></script>
+        <body ng-app="myapp">
+        <div ng-controller="myctrl1">
+            <!.. if we will write ng-controller="myctrl2" our app will share the scope of controller 2..>
+          <!.. write the directive name here..>
+           <class-level></class-level>
+        </div>
+    </body>
+</head>
+</html>
